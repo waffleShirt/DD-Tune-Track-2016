@@ -75,9 +75,57 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MaintenanceSummer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MaintenanceSummer.designer.cs">
+      <DependentUpon>MaintenanceSummer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MaintenanceWinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MaintenanceWinter.Designer.cs">
+      <DependentUpon>MaintenanceWinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PartsSelectorSummer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PartsSelectorSummer.designer.cs">
+      <DependentUpon>PartsSelectorSummer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SummerMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SummerMainForm.Designer.cs">
+      <DependentUpon>SummerMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WinterMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WinterMainForm.Designer.cs">
+      <DependentUpon>WinterMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLiteDBTestDriver.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MaintenanceSummer.resx">
+      <DependentUpon>MaintenanceSummer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MaintenanceWinter.resx">
+      <DependentUpon>MaintenanceWinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PartsSelectorSummer.resx">
+      <DependentUpon>PartsSelectorSummer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SummerMainForm.resx">
+      <DependentUpon>SummerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WinterMainForm.resx">
+      <DependentUpon>WinterMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

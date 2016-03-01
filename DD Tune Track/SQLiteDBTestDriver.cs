@@ -71,7 +71,7 @@ namespace DD_Tune_Track
             mDBConnection.Open();
 
             // Create summer tunes table
-            string sql = "CREATE TABLE [Tunes Summer] (" +
+            string sql = "CREATE TABLE IF NOT EXISTS [Tunes Summer] (" +
                             "[Index]        INTEGER PRIMARY KEY AUTOINCREMENT, " +
                             "[Asset Number] TEXT(0) REFERENCES Bikes ([Asset Number]) " +
                             "               NOT NULL, " +

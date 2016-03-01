@@ -16,5 +16,17 @@ namespace DD_Tune_Track
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Forms.SummerMainForm smf = new Forms.SummerMainForm();
+            smf.Show(); 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Forms.WinterMainForm wmf = new Forms.WinterMainForm();
+            wmf.Show(); 
+        }
     }
 }
