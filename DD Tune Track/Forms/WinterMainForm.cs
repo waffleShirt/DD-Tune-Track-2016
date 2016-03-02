@@ -22,5 +22,11 @@ namespace DD_Tune_Track.Forms
             Forms.MaintenanceWinter wm = new MaintenanceWinter();
             wm.ShowDialog(this); 
         }
+
+        private void btnCloseOut_Click(object sender, EventArgs e)
+        {
+            Forms.CloseOut co = new CloseOut();
+            co.ShowDialog(this);
+        }
     }
 }

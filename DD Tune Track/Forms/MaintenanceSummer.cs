@@ -25,5 +25,23 @@ namespace DD_Tune_Track.Forms
         {
 
         }
+
+        private void btnEditTechList_Click(object sender, EventArgs e)
+        {
+            Forms.TechListEditor tl = new TechListEditor();
+            tl.ShowDialog(this); 
+        }
+
+        private void btnEditBikeList_Click(object sender, EventArgs e)
+        {
+            Forms.BikeListEditor ble = new BikeListEditor();
+            ble.ShowDialog(this); 
+        }
+
+        private void btnEditInventory_Click(object sender, EventArgs e)
+        {
+            Forms.InventoryEditor ie = new InventoryEditor();
+            ie.ShowDialog(this); 
+        }
     }
 }

@@ -75,6 +75,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TuneTypeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TuneTypeEditor.Designer.cs">
+      <DependentUpon>TuneTypeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InventoryEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InventoryEditor.Designer.cs">
+      <DependentUpon>InventoryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BikeListEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BikeListEditor.Designer.cs">
+      <DependentUpon>BikeListEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CloseOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CloseOut.designer.cs">
+      <DependentUpon>CloseOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MaintenanceSummer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,8 +132,26 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLiteDBTestDriver.cs" />
+    <Compile Include="Forms\TechListEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TechListEditor.Designer.cs">
+      <DependentUpon>TechListEditor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TuneTypeEditor.resx">
+      <DependentUpon>TuneTypeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InventoryEditor.resx">
+      <DependentUpon>InventoryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BikeListEditor.resx">
+      <DependentUpon>BikeListEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CloseOut.resx">
+      <DependentUpon>CloseOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MaintenanceSummer.resx">
       <DependentUpon>MaintenanceSummer.cs</DependentUpon>
@@ -135,6 +177,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\TechListEditor.resx">
+      <DependentUpon>TechListEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

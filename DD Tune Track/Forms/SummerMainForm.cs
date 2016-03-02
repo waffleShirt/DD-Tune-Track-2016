@@ -28,5 +28,11 @@ namespace DD_Tune_Track.Forms
             Forms.MaintenanceSummer ms = new MaintenanceSummer();
             ms.ShowDialog(this); 
         }
+
+        private void btnCloseOut_Click(object sender, EventArgs e)
+        {
+            Forms.CloseOut co = new CloseOut();
+            co.ShowDialog(this); 
+        }
     }
 }

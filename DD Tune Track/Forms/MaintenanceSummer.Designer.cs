@@ -85,7 +85,7 @@
             // 
             this.lblTechList.AutoSize = true;
             this.lblTechList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTechList.Location = new System.Drawing.Point(107, 54);
+            this.lblTechList.Location = new System.Drawing.Point(101, 54);
             this.lblTechList.Name = "lblTechList";
             this.lblTechList.Size = new System.Drawing.Size(106, 25);
             this.lblTechList.TabIndex = 21;
@@ -99,6 +99,7 @@
             this.btnEditTechList.TabIndex = 23;
             this.btnEditTechList.Text = "Edit Tech List";
             this.btnEditTechList.UseVisualStyleBackColor = true;
+            this.btnEditTechList.Click += new System.EventHandler(this.btnEditTechList_Click);
             // 
             // lblInventory
             // 
@@ -118,6 +119,7 @@
             this.btnEditBikeList.TabIndex = 27;
             this.btnEditBikeList.Text = "Edit Bike List";
             this.btnEditBikeList.UseVisualStyleBackColor = true;
+            this.btnEditBikeList.Click += new System.EventHandler(this.btnEditBikeList_Click);
             // 
             // btnEditInventory
             // 
@@ -127,6 +129,7 @@
             this.btnEditInventory.TabIndex = 16;
             this.btnEditInventory.Text = "Edit Inventory";
             this.btnEditInventory.UseVisualStyleBackColor = true;
+            this.btnEditInventory.Click += new System.EventHandler(this.btnEditInventory_Click);
             // 
             // lblBikeList
             // 

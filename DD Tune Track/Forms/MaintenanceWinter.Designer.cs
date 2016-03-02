@@ -58,6 +58,7 @@
             this.btnEditTuneTypes.TabIndex = 37;
             this.btnEditTuneTypes.Text = "Edit Tune Types";
             this.btnEditTuneTypes.UseVisualStyleBackColor = true;
+            this.btnEditTuneTypes.Click += new System.EventHandler(this.btnEditTuneTypes_Click);
             // 
             // label5
             // 
@@ -87,6 +88,7 @@
             this.btnEditTechList.TabIndex = 42;
             this.btnEditTechList.Text = "Edit Tech List";
             this.btnEditTechList.UseVisualStyleBackColor = true;
+            this.btnEditTechList.Click += new System.EventHandler(this.btnEditTechList_Click);
             // 
             // button5
             // 
