@@ -53,17 +53,11 @@
             this.txtParts = new System.Windows.Forms.TextBox();
             this.lblParts = new System.Windows.Forms.Label();
             this.btnSuppressDing = new System.Windows.Forms.Button();
-            this.lblTechError = new System.Windows.Forms.Label();
-            this.lblTuneDateError = new System.Windows.Forms.Label();
             this.lblAssetNumberError = new System.Windows.Forms.Label();
             this.btnUpdateChargeList = new System.Windows.Forms.Button();
             this.btnAddUpdate = new System.Windows.Forms.Button();
             this.btnClearRemove = new System.Windows.Forms.Button();
-            this.dtpTuneDate = new System.Windows.Forms.DateTimePicker();
-            this.cmbTech = new System.Windows.Forms.ComboBox();
             this.txtAssetNumber = new System.Windows.Forms.TextBox();
-            this.lblTech = new System.Windows.Forms.Label();
-            this.lblTuneDate = new System.Windows.Forms.Label();
             this.lblAssetNumber = new System.Windows.Forms.Label();
             this.tabChargeLists = new System.Windows.Forms.TabPage();
             this.dgvChargeListTuneList = new System.Windows.Forms.DataGridView();
@@ -125,17 +119,11 @@
             this.tabTuneEntry.Controls.Add(this.txtParts);
             this.tabTuneEntry.Controls.Add(this.lblParts);
             this.tabTuneEntry.Controls.Add(this.btnSuppressDing);
-            this.tabTuneEntry.Controls.Add(this.lblTechError);
-            this.tabTuneEntry.Controls.Add(this.lblTuneDateError);
             this.tabTuneEntry.Controls.Add(this.lblAssetNumberError);
             this.tabTuneEntry.Controls.Add(this.btnUpdateChargeList);
             this.tabTuneEntry.Controls.Add(this.btnAddUpdate);
             this.tabTuneEntry.Controls.Add(this.btnClearRemove);
-            this.tabTuneEntry.Controls.Add(this.dtpTuneDate);
-            this.tabTuneEntry.Controls.Add(this.cmbTech);
             this.tabTuneEntry.Controls.Add(this.txtAssetNumber);
-            this.tabTuneEntry.Controls.Add(this.lblTech);
-            this.tabTuneEntry.Controls.Add(this.lblTuneDate);
             this.tabTuneEntry.Controls.Add(this.lblAssetNumber);
             this.tabTuneEntry.Location = new System.Drawing.Point(4, 22);
             this.tabTuneEntry.Name = "tabTuneEntry";
@@ -148,7 +136,7 @@
             // txtNotes
             // 
             this.txtNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNotes.Location = new System.Drawing.Point(160, 198);
+            this.txtNotes.Location = new System.Drawing.Point(161, 122);
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(310, 31);
             this.txtNotes.TabIndex = 29;
@@ -157,7 +145,7 @@
             // 
             this.lblNotes.AutoSize = true;
             this.lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotes.Location = new System.Drawing.Point(80, 201);
+            this.lblNotes.Location = new System.Drawing.Point(81, 125);
             this.lblNotes.Name = "lblNotes";
             this.lblNotes.Size = new System.Drawing.Size(74, 25);
             this.lblNotes.TabIndex = 30;
@@ -211,11 +199,11 @@
             this.colNotes,
             this.colRemove});
             this.dgvTuneEntryTuneList.EnableHeadersVisualStyles = false;
-            this.dgvTuneEntryTuneList.Location = new System.Drawing.Point(8, 278);
+            this.dgvTuneEntryTuneList.Location = new System.Drawing.Point(8, 202);
             this.dgvTuneEntryTuneList.Name = "dgvTuneEntryTuneList";
             this.dgvTuneEntryTuneList.ReadOnly = true;
             this.dgvTuneEntryTuneList.RowHeadersVisible = false;
-            this.dgvTuneEntryTuneList.Size = new System.Drawing.Size(732, 283);
+            this.dgvTuneEntryTuneList.Size = new System.Drawing.Size(732, 359);
             this.dgvTuneEntryTuneList.TabIndex = 25;
             // 
             // colAssetNumber
@@ -279,7 +267,7 @@
             // txtParts
             // 
             this.txtParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParts.Location = new System.Drawing.Point(160, 161);
+            this.txtParts.Location = new System.Drawing.Point(161, 85);
             this.txtParts.Name = "txtParts";
             this.txtParts.Size = new System.Drawing.Size(310, 31);
             this.txtParts.TabIndex = 22;
@@ -288,7 +276,7 @@
             // 
             this.lblParts.AutoSize = true;
             this.lblParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblParts.Location = new System.Drawing.Point(86, 164);
+            this.lblParts.Location = new System.Drawing.Point(87, 88);
             this.lblParts.Name = "lblParts";
             this.lblParts.Size = new System.Drawing.Size(68, 25);
             this.lblParts.TabIndex = 23;
@@ -305,30 +293,6 @@
             this.btnSuppressDing.Text = "button1";
             this.btnSuppressDing.UseVisualStyleBackColor = true;
             this.btnSuppressDing.Visible = false;
-            // 
-            // lblTechError
-            // 
-            this.lblTechError.AutoSize = true;
-            this.lblTechError.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTechError.ForeColor = System.Drawing.Color.Red;
-            this.lblTechError.Location = new System.Drawing.Point(477, 123);
-            this.lblTechError.Name = "lblTechError";
-            this.lblTechError.Size = new System.Drawing.Size(137, 25);
-            this.lblTechError.TabIndex = 19;
-            this.lblTechError.Text = "Tech Not Set";
-            this.lblTechError.Visible = false;
-            // 
-            // lblTuneDateError
-            // 
-            this.lblTuneDateError.AutoSize = true;
-            this.lblTuneDateError.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTuneDateError.ForeColor = System.Drawing.Color.Red;
-            this.lblTuneDateError.Location = new System.Drawing.Point(477, 86);
-            this.lblTuneDateError.Name = "lblTuneDateError";
-            this.lblTuneDateError.Size = new System.Drawing.Size(189, 25);
-            this.lblTuneDateError.TabIndex = 17;
-            this.lblTuneDateError.Text = "Tune Date Not Set";
-            this.lblTuneDateError.Visible = false;
             // 
             // lblAssetNumberError
             // 
@@ -355,7 +319,7 @@
             // btnAddUpdate
             // 
             this.btnAddUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUpdate.Location = new System.Drawing.Point(367, 235);
+            this.btnAddUpdate.Location = new System.Drawing.Point(368, 159);
             this.btnAddUpdate.Name = "btnAddUpdate";
             this.btnAddUpdate.Size = new System.Drawing.Size(105, 37);
             this.btnAddUpdate.TabIndex = 7;
@@ -365,35 +329,12 @@
             // btnClearRemove
             // 
             this.btnClearRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearRemove.Location = new System.Drawing.Point(256, 235);
+            this.btnClearRemove.Location = new System.Drawing.Point(257, 159);
             this.btnClearRemove.Name = "btnClearRemove";
             this.btnClearRemove.Size = new System.Drawing.Size(105, 37);
             this.btnClearRemove.TabIndex = 8;
             this.btnClearRemove.Text = "Clear";
             this.btnClearRemove.UseVisualStyleBackColor = true;
-            // 
-            // dtpTuneDate
-            // 
-            this.dtpTuneDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTuneDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTuneDate.Location = new System.Drawing.Point(161, 85);
-            this.dtpTuneDate.MaxDate = new System.DateTime(2016, 4, 30, 0, 0, 0, 0);
-            this.dtpTuneDate.MinDate = new System.DateTime(2015, 10, 1, 0, 0, 0, 0);
-            this.dtpTuneDate.Name = "dtpTuneDate";
-            this.dtpTuneDate.Size = new System.Drawing.Size(310, 31);
-            this.dtpTuneDate.TabIndex = 3;
-            // 
-            // cmbTech
-            // 
-            this.cmbTech.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTech.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTech.FormattingEnabled = true;
-            this.cmbTech.Items.AddRange(new object[] {
-            "TB"});
-            this.cmbTech.Location = new System.Drawing.Point(161, 122);
-            this.cmbTech.Name = "cmbTech";
-            this.cmbTech.Size = new System.Drawing.Size(310, 33);
-            this.cmbTech.TabIndex = 5;
             // 
             // txtAssetNumber
             // 
@@ -402,26 +343,6 @@
             this.txtAssetNumber.Name = "txtAssetNumber";
             this.txtAssetNumber.Size = new System.Drawing.Size(310, 31);
             this.txtAssetNumber.TabIndex = 1;
-            // 
-            // lblTech
-            // 
-            this.lblTech.AutoSize = true;
-            this.lblTech.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTech.Location = new System.Drawing.Point(88, 125);
-            this.lblTech.Name = "lblTech";
-            this.lblTech.Size = new System.Drawing.Size(66, 25);
-            this.lblTech.TabIndex = 4;
-            this.lblTech.Text = "Tech:";
-            // 
-            // lblTuneDate
-            // 
-            this.lblTuneDate.AutoSize = true;
-            this.lblTuneDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTuneDate.Location = new System.Drawing.Point(37, 90);
-            this.lblTuneDate.Name = "lblTuneDate";
-            this.lblTuneDate.Size = new System.Drawing.Size(118, 25);
-            this.lblTuneDate.TabIndex = 2;
-            this.lblTuneDate.Text = "Tune Date:";
             // 
             // lblAssetNumber
             // 
@@ -706,7 +627,7 @@
             // maintenanceToolStripMenuItem
             // 
             this.maintenanceToolStripMenuItem.Name = "maintenanceToolStripMenuItem";
-            this.maintenanceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.maintenanceToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.maintenanceToolStripMenuItem.Text = "Maintenance";
             this.maintenanceToolStripMenuItem.Click += new System.EventHandler(this.maintenanceToolStripMenuItem_Click);
             // 
@@ -770,17 +691,11 @@
         private System.Windows.Forms.TextBox txtParts;
         private System.Windows.Forms.Label lblParts;
         private System.Windows.Forms.Button btnSuppressDing;
-        private System.Windows.Forms.Label lblTechError;
-        private System.Windows.Forms.Label lblTuneDateError;
         private System.Windows.Forms.Label lblAssetNumberError;
         private System.Windows.Forms.Button btnUpdateChargeList;
         private System.Windows.Forms.Button btnAddUpdate;
         private System.Windows.Forms.Button btnClearRemove;
-        private System.Windows.Forms.DateTimePicker dtpTuneDate;
-        private System.Windows.Forms.ComboBox cmbTech;
         private System.Windows.Forms.TextBox txtAssetNumber;
-        private System.Windows.Forms.Label lblTech;
-        private System.Windows.Forms.Label lblTuneDate;
         private System.Windows.Forms.Label lblAssetNumber;
         private System.Windows.Forms.TabPage tabChargeLists;
         private System.Windows.Forms.Button btnGoToToday;
