@@ -8,6 +8,9 @@ namespace DD_Tune_Track
 {
     static class Program
     {
+        // Global application object
+        public static Source.TuneTrackApplication appObject = new Source.TuneTrackApplication(); 
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -18,7 +21,7 @@ namespace DD_Tune_Track
             Application.SetCompatibleTextRenderingDefault(false);
 
             //SQLiteDBTestDriver.Execute(); 
-            SQLiteDBTestDriver.ExecuteDDTTDBCreationTest(); 
+            //SQLiteDBTestDriver.ExecuteDDTTDBCreationTest(); 
 
             Application.Run(new Form1());
         }

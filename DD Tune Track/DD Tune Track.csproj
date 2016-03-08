@@ -131,6 +131,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\TuneTrackApplication.cs" />
+    <Compile Include="Source\Bike.cs" />
+    <Compile Include="Source\ChargeList.cs" />
+    <Compile Include="Source\Season.cs" />
+    <Compile Include="Source\SummerInventoryItem.cs" />
+    <Compile Include="Source\SummerTune.cs" />
+    <Compile Include="Source\Tech.cs" />
+    <Compile Include="Source\Tune.cs" />
+    <Compile Include="Source\WinterTune.cs" />
+    <Compile Include="Source\WinterTuneType.cs" />
     <Compile Include="SQLiteDBTestDriver.cs" />
     <Compile Include="Forms\TechListEditor.cs">
       <SubType>Form</SubType>

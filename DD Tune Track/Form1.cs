@@ -28,5 +28,11 @@ namespace DD_Tune_Track
             Forms.WinterMainForm wmf = new Forms.WinterMainForm();
             wmf.Show(); 
         }
+
+        private void btnShowTechEditForm_Click(object sender, EventArgs e)
+        {
+            Forms.TechListEditor tle = new Forms.TechListEditor();
+            tle.ShowDialog(this);  
+        }
     }
 }

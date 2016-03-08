@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnShowTechEditForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -53,11 +54,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnShowTechEditForm
+            // 
+            this.btnShowTechEditForm.Location = new System.Drawing.Point(12, 70);
+            this.btnShowTechEditForm.Name = "btnShowTechEditForm";
+            this.btnShowTechEditForm.Size = new System.Drawing.Size(124, 23);
+            this.btnShowTechEditForm.TabIndex = 2;
+            this.btnShowTechEditForm.Text = "Show Tech Edit Form";
+            this.btnShowTechEditForm.UseVisualStyleBackColor = true;
+            this.btnShowTechEditForm.Click += new System.EventHandler(this.btnShowTechEditForm_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.btnShowTechEditForm);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -71,6 +83,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnShowTechEditForm;
     }
 }
 
