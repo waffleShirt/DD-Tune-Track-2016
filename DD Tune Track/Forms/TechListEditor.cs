@@ -85,15 +85,27 @@ namespace DD_Tune_Track.Forms
         /// </summary>
         private void AddNewTech()
         {
-            // Validate input first
+            // Reset error labels
+            lblTechInitialError.Visible = false;
+            lblDuplicateTechError.Visible = false;
+
+            // Validate input
+            // Check for empty string input
             if (txtTechName.Text == string.Empty)
             {
                 lblTechInitialError.Visible = true;
                 return;
             }
 
-            // Reset error label
-            lblTechInitialError.Visible = false;
+            // Check for duplicate name input
+            foreach (Tech tech in mTechList)
+            {
+                if (tech.Name.Equals(txtTechName.Text, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    lblDuplicateTechError.Visible = true;
+                    return; 
+                }
+            }
 
             // Create a new tech
             mTechList.Add(new Tech(txtTechName.Text));
@@ -148,7 +160,7 @@ namespace DD_Tune_Track.Forms
 
         private void lstTechs_KeyUp(object sender, KeyEventArgs e)
         {
-            // !!!! Implement delete key to delete item from list box !!!!
+            // !!!! Implement delete key to delete item from list box? !!!!
         }
 
         #endregion

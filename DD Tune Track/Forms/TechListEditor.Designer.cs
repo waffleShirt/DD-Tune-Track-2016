@@ -38,6 +38,7 @@
             this.lblTechInitialError = new System.Windows.Forms.Label();
             this.lstTechs = new System.Windows.Forms.ListBox();
             this.btnSuppressDing = new System.Windows.Forms.Button();
+            this.lblDuplicateTechError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSave
@@ -131,6 +132,18 @@
             this.btnSuppressDing.UseVisualStyleBackColor = true;
             this.btnSuppressDing.Visible = false;
             // 
+            // lblDuplicateTechError
+            // 
+            this.lblDuplicateTechError.AutoSize = true;
+            this.lblDuplicateTechError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDuplicateTechError.ForeColor = System.Drawing.Color.Red;
+            this.lblDuplicateTechError.Location = new System.Drawing.Point(12, 35);
+            this.lblDuplicateTechError.Name = "lblDuplicateTechError";
+            this.lblDuplicateTechError.Size = new System.Drawing.Size(186, 20);
+            this.lblDuplicateTechError.TabIndex = 27;
+            this.lblDuplicateTechError.Text = "Tech already exists in list!";
+            this.lblDuplicateTechError.Visible = false;
+            // 
             // TechListEditor
             // 
             this.AcceptButton = this.btnSuppressDing;
@@ -138,6 +151,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 291);
             this.ControlBox = false;
+            this.Controls.Add(this.lblDuplicateTechError);
             this.Controls.Add(this.btnSuppressDing);
             this.Controls.Add(this.lstTechs);
             this.Controls.Add(this.lblTechInitialError);
@@ -168,5 +182,6 @@
         private System.Windows.Forms.Label lblTechInitialError;
         private System.Windows.Forms.ListBox lstTechs;
         private System.Windows.Forms.Button btnSuppressDing;
+        private System.Windows.Forms.Label lblDuplicateTechError;
     }
 }

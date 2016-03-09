@@ -20,6 +20,9 @@ namespace DD_Tune_Track
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            // Initialise application object
+            appObject.Initialise(); 
+
             //SQLiteDBTestDriver.Execute(); 
             //SQLiteDBTestDriver.ExecuteDDTTDBCreationTest(); 
 

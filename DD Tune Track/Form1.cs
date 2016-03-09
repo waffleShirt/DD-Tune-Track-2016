@@ -34,5 +34,11 @@ namespace DD_Tune_Track
             Forms.TechListEditor tle = new Forms.TechListEditor();
             tle.ShowDialog(this);  
         }
+
+        private void btnShowBikeListEditor_Click(object sender, EventArgs e)
+        {
+            Forms.BikeListEditor ble = new Forms.BikeListEditor();
+            ble.ShowDialog(this); 
+        }
     }
 }
