@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BikeListEditor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblAssetNumber = new System.Windows.Forms.Label();
             this.lblBrand = new System.Windows.Forms.Label();
             this.lblModel = new System.Windows.Forms.Label();
@@ -40,6 +40,11 @@
             this.cmbModel = new System.Windows.Forms.ComboBox();
             this.cmbBrand = new System.Windows.Forms.ComboBox();
             this.dgvBikeList = new System.Windows.Forms.DataGridView();
+            this.colAssetNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBrand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colModel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSerialNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRemove = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lblInfo = new System.Windows.Forms.TextBox();
             this.lblAssetNumberError = new System.Windows.Forms.Label();
             this.lblBrandError = new System.Windows.Forms.Label();
@@ -50,12 +55,8 @@
             this.lblSerialNumber = new System.Windows.Forms.Label();
             this.txtSerialNumber = new System.Windows.Forms.TextBox();
             this.lblAssetExistsError = new System.Windows.Forms.Label();
-            this.colAssetNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBrand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colModel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSerialNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRemove = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnSuppressDing = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBikeList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,6 +114,7 @@
             // 
             // txtAssetNumber
             // 
+            this.txtAssetNumber.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAssetNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAssetNumber.Location = new System.Drawing.Point(171, 142);
             this.txtAssetNumber.Name = "txtAssetNumber";
@@ -145,6 +147,7 @@
             // 
             this.dgvBikeList.AllowUserToAddRows = false;
             this.dgvBikeList.AllowUserToDeleteRows = false;
+            this.dgvBikeList.AllowUserToResizeRows = false;
             this.dgvBikeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBikeList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colAssetNumber,
@@ -154,6 +157,7 @@
             this.colRemove});
             this.dgvBikeList.EnableHeadersVisualStyles = false;
             this.dgvBikeList.Location = new System.Drawing.Point(12, 346);
+            this.dgvBikeList.MultiSelect = false;
             this.dgvBikeList.Name = "dgvBikeList";
             this.dgvBikeList.ReadOnly = true;
             this.dgvBikeList.RowHeadersVisible = false;
@@ -161,7 +165,55 @@
             this.dgvBikeList.Size = new System.Drawing.Size(800, 267);
             this.dgvBikeList.TabIndex = 30;
             this.dgvBikeList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBikeList_CellContentClick);
+            this.dgvBikeList.SelectionChanged += new System.EventHandler(this.dgvBikeList_SelectionChanged);
             this.dgvBikeList.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgvBikeList_MouseUp);
+            // 
+            // colAssetNumber
+            // 
+            this.colAssetNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colAssetNumber.DataPropertyName = "AssetNumber";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colAssetNumber.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colAssetNumber.HeaderText = "Asset Number";
+            this.colAssetNumber.Name = "colAssetNumber";
+            this.colAssetNumber.ReadOnly = true;
+            // 
+            // colBrand
+            // 
+            this.colBrand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colBrand.DataPropertyName = "Brand";
+            this.colBrand.HeaderText = "Brand";
+            this.colBrand.Name = "colBrand";
+            this.colBrand.ReadOnly = true;
+            // 
+            // colModel
+            // 
+            this.colModel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colModel.DataPropertyName = "Model";
+            this.colModel.HeaderText = "Model";
+            this.colModel.Name = "colModel";
+            this.colModel.ReadOnly = true;
+            // 
+            // colSerialNumber
+            // 
+            this.colSerialNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colSerialNumber.DataPropertyName = "Serial";
+            this.colSerialNumber.HeaderText = "Serial";
+            this.colSerialNumber.Name = "colSerialNumber";
+            this.colSerialNumber.ReadOnly = true;
+            // 
+            // colRemove
+            // 
+            this.colRemove.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colRemove.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colRemove.HeaderText = "";
+            this.colRemove.Name = "colRemove";
+            this.colRemove.ReadOnly = true;
+            this.colRemove.Text = "-";
+            this.colRemove.UseColumnTextForButtonValue = true;
+            this.colRemove.Width = 5;
             // 
             // lblInfo
             // 
@@ -278,53 +330,6 @@
             this.lblAssetExistsError.Text = "Asset Number Already Exists";
             this.lblAssetExistsError.Visible = false;
             // 
-            // colAssetNumber
-            // 
-            this.colAssetNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colAssetNumber.DataPropertyName = "AssetNumber";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colAssetNumber.DefaultCellStyle = dataGridViewCellStyle7;
-            this.colAssetNumber.HeaderText = "Asset Number";
-            this.colAssetNumber.Name = "colAssetNumber";
-            this.colAssetNumber.ReadOnly = true;
-            // 
-            // colBrand
-            // 
-            this.colBrand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colBrand.DataPropertyName = "Brand";
-            this.colBrand.HeaderText = "Brand";
-            this.colBrand.Name = "colBrand";
-            this.colBrand.ReadOnly = true;
-            // 
-            // colModel
-            // 
-            this.colModel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colModel.DataPropertyName = "Model";
-            this.colModel.HeaderText = "Model";
-            this.colModel.Name = "colModel";
-            this.colModel.ReadOnly = true;
-            // 
-            // colSerialNumber
-            // 
-            this.colSerialNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colSerialNumber.DataPropertyName = "Serial";
-            this.colSerialNumber.HeaderText = "Serial";
-            this.colSerialNumber.Name = "colSerialNumber";
-            this.colSerialNumber.ReadOnly = true;
-            // 
-            // colRemove
-            // 
-            this.colRemove.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colRemove.DefaultCellStyle = dataGridViewCellStyle8;
-            this.colRemove.HeaderText = "";
-            this.colRemove.Name = "colRemove";
-            this.colRemove.ReadOnly = true;
-            this.colRemove.Text = "-";
-            this.colRemove.UseColumnTextForButtonValue = true;
-            this.colRemove.Width = 5;
-            // 
             // btnSuppressDing
             // 
             this.btnSuppressDing.Location = new System.Drawing.Point(748, 316);
@@ -335,6 +340,18 @@
             this.btnSuppressDing.UseVisualStyleBackColor = true;
             this.btnSuppressDing.Visible = false;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(376, 302);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(105, 37);
+            this.btnUpdate.TabIndex = 43;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // BikeListEditor
             // 
             this.AcceptButton = this.btnSuppressDing;
@@ -342,6 +359,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 668);
             this.ControlBox = false;
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSuppressDing);
             this.Controls.Add(this.lblAssetExistsError);
             this.Controls.Add(this.txtSerialNumber);
@@ -402,5 +420,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSerialNumber;
         private System.Windows.Forms.DataGridViewButtonColumn colRemove;
         private System.Windows.Forms.Button btnSuppressDing;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

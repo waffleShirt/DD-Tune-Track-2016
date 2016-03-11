@@ -50,6 +50,7 @@ namespace DD_Tune_Track.Source
         public string AssetNumber
         {
             get { return mAssetNumber; }
+            set { mAssetNumber = value; }
         }
 
         /// <summary>
@@ -58,6 +59,7 @@ namespace DD_Tune_Track.Source
         public string Brand
         {
             get { return mBrand; }
+            set { mBrand = value; }
         }
 
         /// <summary>
@@ -66,6 +68,7 @@ namespace DD_Tune_Track.Source
         public string Model
         {
             get { return mModel; }
+            set { mModel = value; }
         }
 
         /// <summary>
@@ -74,6 +77,7 @@ namespace DD_Tune_Track.Source
         public string Serial
         {
             get { return mSerial; }
+            set { mSerial = value; }
         }
 
         /// <summary>
